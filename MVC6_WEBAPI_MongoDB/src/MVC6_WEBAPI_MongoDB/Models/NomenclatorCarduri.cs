@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace MVC6_WEBAPI_MongoDB.Models
 {
-    public class NomenclatorCarduri
+    public class NomenclatorCarduri //deprecated (se tine evidenta clientilor care au cumparat valuta cu cardul)
     {
         [BsonId]
         public string Id { get; set; }

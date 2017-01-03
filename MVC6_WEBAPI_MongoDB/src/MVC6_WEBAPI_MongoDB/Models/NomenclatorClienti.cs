@@ -2,7 +2,7 @@
 
 namespace MVC6_WEBAPI_MongoDB.Models
 {
-    public class NomenclatorClienti
+    public class NomenclatorClienti//clar
     {
         [BsonId]
         public string Id { get; set; }

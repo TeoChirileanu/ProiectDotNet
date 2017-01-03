@@ -10,14 +10,14 @@ namespace MVC6_WEBAPI_MongoDB.Models
         public int NumarCurentValuta { get; set; }
         public string AcronimValuta { get; set; } //EUR, USD, CHF etc
         public string DenumireValuta { get; set; } //euro, dolar american etc
-        public int EvaluareInitiala { get; set; } //cati lei am dat pe valuta repsectiva
-        public int ValoareCumparari { get; set; }
+        public int EvaluareInitiala { get; set; } //valoare in lei a valutei disponibile la inceputul lunii
+        public int ValoareCumparari { get; set; } //cumulata pe parcursul lunii
         public int ValoareVanzari { get; set; }
-        public int AdaosTranzactii { get; set; }
-        public int ComisionDinCumparari { get; set; }
+        public int AdaosTranzactii { get; set; } //{valoare_valuta_vanduta} - {valoare_valuta_cumparata}
+        public int ComisionDinCumparari { get; set; } //{valoare_valuta_cumparata} * {procent_comision}
         public int ComisionDinVanzari { get; set; }
-        public int IntrariAlimentari { get; set; }
-        public int IesiriRemiteri { get; set; }
-        public int EvaluareFinala { get; set; }
+        public int IntrariAlimentari { get; set; } //suma cumulata din transferuri
+        public int IesiriRemiteri { get; set; } //suma iesita prin transfer
+        public int EvaluareFinala { get; set; } //valoare in lei a valutei dispinibila la momentul actual (cand se face actualizarea) 
     }
 }
